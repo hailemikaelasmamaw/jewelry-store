@@ -51,10 +51,56 @@
     "pagefly-home": {
       "type": "pagefly-home",
       "settings": {}
+    },
+    "benefits_section_mj74Xh": {
+      "type": "benefits-section",
+      "blocks": {
+        "benefit_xxxaDn": {
+          "type": "benefit",
+          "settings": {
+            "title": "Premium Quality",
+            "description": "Every piece is crafted with the finest materials and expert craftsmanship"
+          }
+        },
+        "benefit_AFTQD8": {
+          "type": "benefit",
+          "settings": {
+            "title": "Secure Shopping",
+            "description": "Shop with confidence with our secure payment system and buyer protection"
+          }
+        },
+        "benefit_zggcti": {
+          "type": "benefit",
+          "settings": {
+            "title": "Free Shipping",
+            "description": "Enjoy complimentary shipping on all orders over $100"
+          }
+        },
+        "benefit_qVMcjG": {
+          "type": "benefit",
+          "settings": {
+            "title": "Easy Returns",
+            "description": "30-day hassle-free returns if you're not completely satisfied"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_xxxaDn",
+        "benefit_AFTQD8",
+        "benefit_zggcti",
+        "benefit_qVMcjG"
+      ],
+      "name": "Benefits Section",
+      "settings": {
+        "title": "Why Shop With Us",
+        "background_color": "#681d1d",
+        "text_color": "#271010"
+      }
     }
   },
   "order": [
     "image_banner",
-    "pagefly-home"
+    "pagefly-home",
+    "benefits_section_mj74Xh"
   ]
 }
