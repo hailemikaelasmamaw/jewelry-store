@@ -1,0 +1,167 @@
+{% schema %}
+{
+  "name": "Benefits",
+  "target": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Why Shop With Us"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#1a1a1a"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Benefit Title",
+          "default": "Benefit Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Benefit Description",
+          "default": "Describe the benefit your customers will receive"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "Premium Quality",
+            "description": "Every piece is crafted with the finest materials and expert craftsmanship"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "Secure Shopping",
+            "description": "Shop with confidence with our secure payment system and buyer protection"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "Free Shipping",
+            "description": "Enjoy complimentary shipping on all orders over $100"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "Easy Returns",
+            "description": "30-day hassle-free returns if you're not completely satisfied"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div class="benefits-section" style="background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};">
+  <div class="page-width">
+    {% if section.settings.title != blank %}
+      <h2 class="benefits-title text-center">{{ section.settings.title }}</h2>
+    {% endif %}
+    
+    <div class="benefits-grid">
+      {% for block in section.blocks %}
+        <div class="benefit-item" {{ block.shopify_attributes }}>
+          {% if block.settings.icon != blank %}
+            <div class="benefit-icon">
+              {{ block.settings.icon | image_url: width: 60 | image_tag }}
+            </div>
+          {% endif %}
+          <h3 class="benefit-title">{{ block.settings.title }}</h3>
+          <p class="benefit-description">{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .benefits-section {
+    padding: 60px 0;
+  }
+  
+  .benefits-title {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .benefit-item {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-icon {
+    margin-bottom: 20px;
+  }
+  
+  .benefit-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  .benefit-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  
+  .benefit-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  @media screen and (max-width: 749px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .benefits-title {
+      font-size: 2rem;
+    }
+  }
+</style> 

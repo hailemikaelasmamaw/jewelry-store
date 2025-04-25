@@ -1,0 +1,17 @@
+{%- if block.settings.title != blank -%}
+  <h2 class="benefits-title">{{ block.settings.title }}</h2>
+{%- endif -%}
+
+<div class="benefits-grid">
+  {%- for benefit in block.settings.benefits -%}
+    <div class="benefit-item">
+      {%- if benefit.icon != blank -%}
+        <div class="benefit-icon">
+          {{ benefit.icon | image_url: width: 60 | image_tag }}
+        </div>
+      {%- endif -%}
+      <h3 class="benefit-title">{{ benefit.title }}</h3>
+      <p class="benefit-description">{{ benefit.description }}</p>
+    </div>
+  {%- endfor -%}
+</div> 

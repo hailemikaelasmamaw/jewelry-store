@@ -1,0 +1,109 @@
+{{ 'benefits.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+  {%- if section.settings.title != blank -%}
+    <h2 class="benefits-title">{{ section.settings.title }}</h2>
+  {%- endif -%}
+  
+  <div class="benefits-grid">
+    {%- for block in section.blocks -%}
+      <div class="benefit-item" {{ block.shopify_attributes }}>
+        {%- if block.settings.icon != blank -%}
+          <div class="benefit-icon">
+            {{ block.settings.icon | image_url: width: 60 | image_tag }}
+          </div>
+        {%- endif -%}
+        <h3 class="benefit-title">{{ block.settings.title }}</h3>
+        <p class="benefit-description">{{ block.settings.description }}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Benefits Section",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Why Shop With Us"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#1a1a1a"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Benefit Title",
+          "default": "Benefit Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Benefit Description",
+          "default": "Describe the benefit your customers will receive"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits Section",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "Premium Quality",
+            "description": "Every piece is crafted with the finest materials and expert craftsmanship"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "Secure Shopping",
+            "description": "Shop with confidence with our secure payment system and buyer protection"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "Free Shipping",
+            "description": "Enjoy complimentary shipping on all orders over $100"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "title": "Easy Returns",
+            "description": "30-day hassle-free returns if you're not completely satisfied"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 
