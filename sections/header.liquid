@@ -22,6 +22,49 @@
     margin-left: -1.2rem;
   }
 
+  .about-us-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .about-us-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+  }
+
+  .about-us-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .about-us-dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .about-us-dropdown:hover .about-us-dropdown-content {
+    display: block;
+  }
+
+  .about-us-btn {
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: rgb(var(--color-foreground));
+  }
+
+  .about-us-btn:hover {
+    color: rgba(var(--color-foreground), 0.75);
+  }
+
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
       width: 75%;
@@ -189,6 +232,14 @@
         endif
       endif
     %}
+
+    <nav class="header__nav">
+      <ul class="list-menu list-menu--inline" role="list">
+        <li class="about-us-dropdown">
+          <a href="/pages/about-us" class="about-us-btn">About Us</a>
+        </li>
+      </ul>
+    </nav>
 
     {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
