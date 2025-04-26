@@ -1464,12 +1464,6 @@
         "id": "main_menu",
         "label": "Main Menu",
         "default": "main-menu"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_about_us",
-        "label": "Show About Us in menu",
-        "default": true
       }
     ]
   }
