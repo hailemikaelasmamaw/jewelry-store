@@ -1,0 +1,28 @@
+{
+  "main-menu": {
+    "name": "Main menu",
+    "handle": "main-menu",
+    "links": [
+      {
+        "title": "Home",
+        "url": "/",
+        "handle": "home"
+      },
+      {
+        "title": "Catalog",
+        "url": "/collections/all",
+        "handle": "catalog"
+      },
+      {
+        "title": "About Us",
+        "url": "/pages/pf-05d1751e",
+        "handle": "about-us"
+      },
+      {
+        "title": "Contact",
+        "url": "/pages/contact",
+        "handle": "contact"
+      }
+    ]
+  }
+} 
