@@ -1,23 +1,23 @@
 {
-  "main-menu": {
+    "main-menu": {
     "name": "Main menu",
     "handle": "main-menu",
     "links": [
-      {
+        {
         "title": "Home",
         "url": "/",
         "handle": "home"
-      },
-      {
+        },
+        {
         "title": "About Us",
-        "url": "/pages/pf-05d1751e",
+        "url": "/pages/about-us",
         "handle": "about-us"
-      },
-      {
+        },
+        {
         "title": "Contact",
         "url": "/pages/contact",
         "handle": "contact"
-      }
+        }
     ]
-  }
+    }
 }
