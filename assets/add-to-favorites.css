@@ -1,0 +1,71 @@
+.favorite-button {
+  display: inline-block;
+  margin: 10px 0;
+  position: relative;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+.favorite-btn:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.heart-icon {
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.heart-path {
+  transition: fill 0.3s ease;
+}
+
+.favorite-btn.active .heart-path {
+  fill: var(--heart-color, #ff0000);
+}
+
+/* Notification styles */
+.favorite-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.favorite-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.favorite-notification.remove {
+  background: #f44336;
+} 
