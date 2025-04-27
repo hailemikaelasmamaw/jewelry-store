@@ -113,27 +113,14 @@
   align-items: center;
   gap: 5px;
   width: 100%;
+  justify-content: inherit;
 }
 
 /* Text alignment classes */
-.text-left {
-  justify-content: flex-start;
-  text-align: left;
-  margin-right: auto;
-  padding-left: 20px;
-}
-
-.text-center {
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-}
-
+.text-left,
+.text-center,
 .text-right {
-  justify-content: flex-end;
-  text-align: right;
-  margin-left: auto;
-  padding-right: 20px;
+  display: none;
 }
 
 .animate-text {
@@ -219,12 +206,15 @@
 
 .content-align-left {
   justify-content: flex-start;
+  text-align: left;
 }
 .content-align-center {
   justify-content: center;
+  text-align: center;
 }
 .content-align-right {
   justify-content: flex-end;
+  text-align: right;
 }
 </style>
 
