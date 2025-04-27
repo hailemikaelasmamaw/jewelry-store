@@ -29,7 +29,7 @@
           {%- for block in section.blocks -%}
             <div class="custom-announcement-slide" {{ block.shopify_attributes }}>
               {%- if block.settings.text != blank -%}
-                <div class="custom-announcement-text{% if section.settings.enable_animation %} animate-text{% endif %}">
+                <div class="custom-announcement-text{% if section.settings.enable_animation %} animate-text{% endif %}" style="text-align: {{ block.settings.text_alignment }};">
                   {%- if block.settings.link != blank -%}
                     <a href="{{ block.settings.link }}" class="custom-announcement-link">
                   {%- endif -%}
@@ -44,7 +44,7 @@
               {%- endif -%}
 
               {%- if block.settings.show_countdown and block.settings.countdown_date != blank -%}
-                <div class="countdown-timer" data-end-date="{{ block.settings.countdown_date }}">
+                <div class="countdown-timer" style="justify-content: {{ block.settings.text_alignment }};">
                   <span class="countdown-label">{{ block.settings.countdown_label }}</span>
                   <div class="countdown-display">
                     <span class="days">00</span>d
@@ -101,8 +101,25 @@
 }
 
 .custom-announcement-slide {
-  text-align: center;
   padding: 5px 0;
+}
+
+.custom-announcement-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.custom-announcement-text[style*="text-align: left"] {
+  justify-content: flex-start;
+}
+
+.custom-announcement-text[style*="text-align: center"] {
+  justify-content: center;
+}
+
+.custom-announcement-text[style*="text-align: right"] {
+  justify-content: flex-end;
 }
 
 .animate-text {
@@ -123,7 +140,6 @@
 .countdown-timer {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   margin-top: 5px;
 }
@@ -313,6 +329,26 @@
           "id": "text",
           "default": "Welcome to our store!",
           "label": "Announcement text"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
         },
         {
           "type": "url",
