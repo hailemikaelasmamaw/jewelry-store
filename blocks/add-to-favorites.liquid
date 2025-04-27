@@ -23,7 +23,7 @@
 {% endschema %}
 
 {{ 'add-to-favorites.css' | asset_url | stylesheet_tag }}
-{{ 'add-to-favorites.js' | asset_url | script_tag }}
+<script src="{{ 'add-to-favorites.js' | asset_url }}" defer></script>
 
 <div class="favorite-button" data-product-id="{{ product.id }}" style="--heart-color: {{ block.settings.heart_color }}">
   <button class="favorite-btn" aria-label="Add to favorites">

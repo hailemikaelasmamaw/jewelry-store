@@ -61,6 +61,15 @@ class FavoriteButton {
 
     localStorage.setItem('favorites', JSON.stringify(favorites));
     this.updateTooltip();
+
+    // Dispatch custom event for counter update
+    window.dispatchEvent(new CustomEvent('favoritesUpdated', {
+      detail: {
+        count: favorites.length,
+        action: isRemove ? 'remove' : 'add',
+        productId: this.productId
+      }
+    }));
   }
 }
 
