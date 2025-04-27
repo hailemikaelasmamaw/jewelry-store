@@ -28,32 +28,34 @@
         >
           {%- for block in section.blocks -%}
             <div class="custom-announcement-slide" {{ block.shopify_attributes }}>
-              {%- if block.settings.text != blank -%}
-                <div class="custom-announcement-text{% if section.settings.enable_animation %} animate-text{% endif %}" style="text-align: {{ block.settings.text_alignment }};">
-                  {%- if block.settings.link != blank -%}
-                    <a href="{{ block.settings.link }}" class="custom-announcement-link">
-                  {%- endif -%}
-                  
-                  <span class="announcement-message">{{ block.settings.text | escape }}</span>
-                  
-                  {%- if block.settings.link != blank -%}
-                    <span class="announcement-arrow">→</span>
-                    </a>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
-
-              {%- if block.settings.show_countdown and block.settings.countdown_date != blank -%}
-                <div class="countdown-timer" style="justify-content: {{ block.settings.text_alignment }};">
-                  <span class="countdown-label">{{ block.settings.countdown_label }}</span>
-                  <div class="countdown-display">
-                    <span class="days">00</span>d
-                    <span class="hours">00</span>h
-                    <span class="minutes">00</span>m
-                    <span class="seconds">00</span>s
+              <div class="custom-announcement-bar__content content-align-{{ block.settings.text_alignment }}">
+                {%- if block.settings.text != blank -%}
+                  <div class="custom-announcement-text{% if section.settings.enable_animation %} animate-text{% endif %}">
+                    {%- if block.settings.link != blank -%}
+                      <a href="{{ block.settings.link }}" class="custom-announcement-link">
+                    {%- endif -%}
+                    
+                    <span class="announcement-message">{{ block.settings.text | escape }}</span>
+                    
+                    {%- if block.settings.link != blank -%}
+                      <span class="announcement-arrow">→</span>
+                      </a>
+                    {%- endif -%}
                   </div>
-                </div>
-              {%- endif -%}
+                {%- endif -%}
+
+                {%- if block.settings.show_countdown and block.settings.countdown_date != blank -%}
+                  <div class="countdown-timer">
+                    <span class="countdown-label">{{ block.settings.countdown_label }}</span>
+                    <div class="countdown-display">
+                      <span class="days">00</span>d
+                      <span class="hours">00</span>h
+                      <span class="minutes">00</span>m
+                      <span class="seconds">00</span>s
+                    </div>
+                  </div>
+                {%- endif -%}
+              </div>
             </div>
           {%- endfor -%}
         </div>
@@ -113,26 +115,24 @@
   width: 100%;
 }
 
-/* Left alignment */
-.custom-announcement-text[style*="text-align: left"] {
+/* Text alignment classes */
+.text-left {
   justify-content: flex-start;
-  margin-left: 0;
+  text-align: left;
   margin-right: auto;
   padding-left: 20px;
 }
 
-/* Center alignment */
-.custom-announcement-text[style*="text-align: center"] {
+.text-center {
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  margin: 0 auto;
 }
 
-/* Right alignment */
-.custom-announcement-text[style*="text-align: right"] {
+.text-right {
   justify-content: flex-end;
+  text-align: right;
   margin-left: auto;
-  margin-right: 0;
   padding-right: 20px;
 }
 
@@ -160,23 +160,17 @@
 }
 
 /* Countdown timer alignment */
-.countdown-timer[style*="justify-content: left"] {
+.countdown-timer.text-left {
   justify-content: flex-start;
-  margin-left: 0;
-  margin-right: auto;
   padding-left: 20px;
 }
 
-.countdown-timer[style*="justify-content: center"] {
+.countdown-timer.text-center {
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.countdown-timer[style*="justify-content: right"] {
+.countdown-timer.text-right {
   justify-content: flex-end;
-  margin-left: auto;
-  margin-right: 0;
   padding-right: 20px;
 }
 
@@ -209,13 +203,28 @@
 
 /* Responsive adjustments */
 @media screen and (max-width: 749px) {
-  .custom-announcement-text[style*="text-align: left"],
-  .custom-announcement-text[style*="text-align: right"],
-  .countdown-timer[style*="justify-content: left"],
-  .countdown-timer[style*="justify-content: right"] {
+  .text-left,
+  .text-right,
+  .countdown-timer.text-left,
+  .countdown-timer.text-right {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+.custom-announcement-bar__content {
+  display: flex;
+  width: 100%;
+}
+
+.content-align-left {
+  justify-content: flex-start;
+}
+.content-align-center {
+  justify-content: center;
+}
+.content-align-right {
+  justify-content: flex-end;
 }
 </style>
 
