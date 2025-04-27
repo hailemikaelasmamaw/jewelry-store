@@ -1,0 +1,177 @@
+/* Mobile First Approach */
+.pagefly-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) {
+  .pagefly-container {
+    padding: 0 30px;
+  }
+  
+  .pf-r-dg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+  .pagefly-container {
+    padding: 0 50px;
+    max-width: 1200px;
+  }
+  
+  .pf-r-dg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive Images */
+.pf-media-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+}
+
+/* Responsive Spacing */
+@media screen and (max-width: 767px) {
+  .section-padding {
+    padding: 40px 0;
+  }
+  
+  .pf-c {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .pf-c {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section-padding {
+    padding: 80px 0;
+  }
+  
+  .pf-c {
+    margin-bottom: 40px;
+  }
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 767px) {
+  .pf-nav {
+    flex-direction: column;
+  }
+  
+  .pf-nav-item {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+/* Responsive Buttons */
+@media screen and (max-width: 767px) {
+  .pf-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Responsive Grid System */
+.pf-r {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.pf-c {
+  padding: 0 15px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .pf-c-sm-6 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pf-c-lg-4 {
+    width: 33.333%;
+  }
+}
+
+/* Responsive Containers */
+.pf-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .pf-container {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pf-container {
+    padding: 0 50px;
+    max-width: 1200px;
+  }
+} 
