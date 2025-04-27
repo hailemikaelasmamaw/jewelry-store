@@ -1,0 +1,122 @@
+{% comment %}
+  Renders a Black Friday popup notification.
+  
+  Usage:
+  {% render 'black-friday-popup' %}
+{% endcomment %}
+
+<div class="black-friday-popup" id="blackFridayPopup">
+  <div class="black-friday-popup__content">
+    <button class="black-friday-popup__close" onclick="closeBlackFridayPopup()">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="black-friday-popup__message">
+      <h2 class="black-friday-popup__title">Black Friday Special!</h2>
+      <p class="black-friday-popup__text">Get up to 50% off on all jewelry items. Limited time offer!</p>
+      <a href="/collections/all" class="black-friday-popup__button">Shop Now</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .black-friday-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .black-friday-popup__content {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .black-friday-popup__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s;
+  }
+
+  .black-friday-popup__close:hover {
+    transform: scale(1.1);
+  }
+
+  .black-friday-popup__title {
+    color: #ff4d4d;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .black-friday-popup__text {
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .black-friday-popup__button {
+    display: inline-block;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+
+  .black-friday-popup__button:hover {
+    background-color: #ff3333;
+  }
+
+  @media screen and (max-width: 480px) {
+    .black-friday-popup__content {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+  }
+</style>
+
+<script>
+  function showBlackFridayPopup() {
+    const popup = document.getElementById('blackFridayPopup');
+    popup.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBlackFridayPopup() {
+    const popup = document.getElementById('blackFridayPopup');
+    popup.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Show popup after 3 seconds
+  setTimeout(showBlackFridayPopup, 3000);
+
+  // Close popup when clicking outside
+  document.getElementById('blackFridayPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeBlackFridayPopup();
+    }
+  });
+</script> 
