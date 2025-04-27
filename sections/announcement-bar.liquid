@@ -28,9 +28,9 @@
         >
           {%- for block in section.blocks -%}
             <div class="custom-announcement-slide" {{ block.shopify_attributes }}>
-              <div class="custom-announcement-bar__content content-align-{{ block.settings.text_alignment }}">
+              <div>
                 {%- if block.settings.text != blank -%}
-                  <div class="custom-announcement-text{% if section.settings.enable_animation %} animate-text{% endif %}">
+                  <div class="custom-announcement-text content-align-{{ block.settings.text_alignment }}{% if section.settings.enable_animation %} animate-text{% endif %}">
                     {%- if block.settings.link != blank -%}
                       <a href="{{ block.settings.link }}" class="custom-announcement-link">
                     {%- endif -%}
