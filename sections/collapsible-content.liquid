@@ -73,17 +73,24 @@
               <div
                 class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
                 {{ block.shopify_attributes }}
+                style="margin-bottom: {{ block.settings.spacing }}px; {% if block.settings.background_color != blank %}background-color: {{ block.settings.background_color }};{% endif %}"
               >
                 <details
                   id="Details-{{ block.id }}-{{ section.id }}"
                   {% if section.settings.open_first_collapsible_row and forloop.first %}
                     open
                   {% endif %}
+                  class="accordion__item {% if block.settings.animation != 'none' %}animate-{{ block.settings.animation }}{% endif %}"
                 >
                   <summary id="Summary-{{ block.id }}-{{ section.id }}">
-                    {% render 'icon-accordion', icon: block.settings.icon %}
+                    {% if block.settings.show_icon %}
+                      {% render 'icon-accordion', icon: block.settings.icon %}
+                    {% endif %}
                     <h3 class="accordion__title inline-richtext h4">
                       {{ block.settings.heading | default: block.settings.page.title | escape }}
+                      {% if block.settings.badge != blank %}
+                        <span class="accordion__badge">{{ block.settings.badge }}</span>
+                      {% endif %}
                     </h3>
                     {{- 'icon-caret.svg' | inline_asset_content -}}
                   </summary>
@@ -296,6 +303,58 @@
           "id": "heading",
           "default": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.default",
           "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge text",
+          "info": "Optional badge/label to display next to the heading"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icon",
+          "label": "Show icon",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "animation",
+          "label": "Animation style",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "fade",
+              "label": "Fade"
+            },
+            {
+              "value": "slide",
+              "label": "Slide"
+            },
+            {
+              "value": "bounce",
+              "label": "Bounce"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "range",
+          "id": "spacing",
+          "min": 0,
+          "max": 50,
+          "step": 5,
+          "unit": "px",
+          "label": "Spacing below item",
+          "default": 10
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "info": "Optional background color for this accordion item"
         },
         {
           "type": "select",
