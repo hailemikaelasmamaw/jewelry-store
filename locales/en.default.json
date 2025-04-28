@@ -122,7 +122,34 @@
         "increase": "Increase quantity"
       },
       "add_to_cart": "Add to cart",
-      "sold_out": "Sold out"
+      "sold_out": "Sold out",
+      "duties_and_taxes_included": "Including duties and taxes",
+      "taxes_included": "Including taxes",
+      "duties_included": "Including duties",
+      "shipping_policy_html": "See our <a href=\"{{ link }}\">shipping policy</a> for more information.",
+      "inventory_low_stock_show_count": "Only {{ quantity }} left in stock",
+      "inventory_low_stock": "Low stock",
+      "inventory_in_stock_show_count": "{{ quantity }} in stock",
+      "inventory_in_stock": "In stock",
+      "inventory_out_of_stock_continue_selling": "Out of stock, but can still be ordered",
+      "inventory_out_of_stock": "Out of stock",
+      "sku": "SKU",
+      "quantity": {
+        "in_cart_html": "{{ quantity }} in cart",
+        "multiples_of": "Available in multiples of {{ quantity }}",
+        "minimum_of": "Minimum of {{ quantity }}",
+        "maximum_of": "Maximum of {{ quantity }}"
+      },
+      "price": {
+        "regular_price": "Regular price",
+        "sale_price": "Sale price"
+      },
+      "volume_pricing": {
+        "title": "Volume pricing",
+        "note": "Volume pricing available",
+        "price_at_each_html": "{{ price }} each"
+      },
+      "view_full_details": "View full details"
     },
     "modal": {
       "label": "Media gallery"
