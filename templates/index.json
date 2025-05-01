@@ -9,98 +9,148 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+    "gp_section_564704643351839755": {
+      "type": "gp-section-564704643351839755",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "section_preload": "true",
+        "checksum": "cac65c054db4acf1922e3270369e5cb98bcc97c109329b84bd33e2be666e1b9c_1_1",
+        "ggBSiA0R_Ky_text": "<p><span style=\"color:#CD1B2E;\">Up To 55% OFF</span></p><p>Women's Day Exclusively</p>",
+        "ggNsVCNLPHN_text": "<p>Celebrate your feminine ferocity with our new sterling silver online exclusive jewelry collection.</p>",
+        "ggI4SO85jRj_label": "Find The Perfect Item",
+        "ggu6JAvgx_D_text": "<p>10K+</p>",
+        "ggwa_d0hEgv_text": "<p>Trusted by 10K+ Clients</p>",
+        "ggWczRnl0O1_text": "<p>100%</p>",
+        "ggYNTr24d5M_text": "<p>Money-Back Guarantee</p>",
+        "ggsIriqbn3P_text": "<p>100%</p>",
+        "gg1K7eY1zlD_text": "<p>Made in Ethiopia</p>",
+        "ggUgy3z1IgJ_text": "<p>10K+</p>",
+        "gg_wfPQ-wLK_text": "<p>Trusted by 10K+ Clients</p>",
+        "ggeL9tSSkCd_text": "<p>100%</p>",
+        "ggryoGsenSC_text": "<p>Money-Back Guarantee</p>",
+        "gg5hNLS5F-J_text": "<p>100%</p>",
+        "gg08DzdX3L4_text": "<p>Made in Ethiopia</p>"
       }
     },
-    "pagefly-home": {
-      "type": "pagefly-home",
-      "settings": {}
-    },
-    "benefits_section_mj74Xh": {
-      "type": "benefits-section",
-      "blocks": {
-        "benefit_xxxaDn": {
-          "type": "benefit",
-          "settings": {
-            "title": "Premium Quality",
-            "description": "Every piece is crafted with the finest materials and expert craftsmanship"
-          }
-        },
-        "benefit_AFTQD8": {
-          "type": "benefit",
-          "settings": {
-            "title": "Secure Shopping",
-            "description": "Shop with confidence with our secure payment system and buyer protection"
-          }
-        },
-        "benefit_zggcti": {
-          "type": "benefit",
-          "settings": {
-            "title": "Free Shipping",
-            "description": "Enjoy complimentary shipping on all orders over $100"
-          }
-        },
-        "benefit_qVMcjG": {
-          "type": "benefit",
-          "settings": {
-            "title": "Easy Returns",
-            "description": "30-day hassle-free returns if you're not completely satisfied"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_xxxaDn",
-        "benefit_AFTQD8",
-        "benefit_zggcti",
-        "benefit_qVMcjG"
-      ],
-      "name": "Benefits Section",
+    "gp_section_564704650129834803": {
+      "type": "gp-section-564704650129834803",
       "settings": {
-        "title": "Why Shop With Us",
-        "background_color": "#681d1d",
-        "text_color": "#271010"
+        "section_preload": "false",
+        "checksum": "75cf1e08ec9edb3bdf863478b090d84892a92233ba0f2c12327084c3e2e34636_1_1",
+        "gg2ZbYOaV5x_label": "RINGS",
+        "ggiG3cy7k1C_label": "EARRINGS",
+        "ggULIL9sJup_label": "BRACELETS",
+        "ggZy1fRnZ1Z_label": "NECKLACES"
+      }
+    },
+    "gp_section_564704646774391570": {
+      "type": "gp-section-564704646774391570",
+      "settings": {
+        "section_preload": "false",
+        "checksum": "709e4a254d43bafbb523fec07c7e2e74936e201206b13c9b4a88a276da9c2840_1_1",
+        "ggXBfdnuQmH_text": "The Perfect Pieces for Every Moment",
+        "ggEsGlJ32Vp_text": "<p>Whether you’re treating yourself or celebrating something special, our inspiring selection of high-quality designs means you’ll always find just the right thing.</p>",
+        "ggU7F6fefl2_text": "<p>Inspiring Assortment</p>",
+        "ggntqAiQCR7_text": "<p>The perfect pieces for every occasion.</p>",
+        "ggMrG2zSXlS_text": "<p>Amazing Value</p>",
+        "ggUgMKOpQWa_text": "<p>The highest-quality design at a great price.</p>",
+        "ggezlayOmX8_text": "<p>Expert Guidance</p>",
+        "ggniqiNWdLz_text": "<p>The original online jeweler since 1999.</p>",
+        "ggDxPQXO8N__text": "<p>Peace Of Mind</p>",
+        "ggZ26AaK3Wy_text": "<p>30-day returns, diamond guarantee.</p>"
+      }
+    },
+    "gp_section_564709056061637797": {
+      "type": "gp-section-564709056061637797",
+      "settings": {
+        "section_preload": "false",
+        "checksum": "9570fdb75b830a121f40b8d37dad48a5695528c8fba69d0c7b20b58ab586b9c2_1_1",
+        "ggXPZYR6oBx_text": "<p>Best Value</p>",
+        "gglPOBWTauX_text": "<p>(1420 reviews)</p>",
+        "ggcrFhyjp87_viewMoreText": "View more product details",
+        "ggcrFhyjp87_viewLessText": "View less product details",
+        "ggfdVx7nl49_text": "Quantity",
+        "ggUMccyudhy_label": "Add to cart",
+        "ggUMccyudhy_outOfStockLabel": "Out of stocks",
+        "ggUMccyudhy_unavailableLabel": "Unavailable",
+        "ggMw3LCEdXW_text": "<p>30-Day Refund</p>",
+        "ggZkgwlJmJY_text": "<p>Money-Back Guarantee</p>",
+        "ggCLrvsO3cb_text": "<p>Secure Payment</p>",
+        "ggnQf8bNrpe_text": "<p>Multiple Payment Gateways</p>",
+        "gg1QgJYz8dy_text": "<p>Special Gift Set on Sale at <span style=\"color:#CD1B2E;\">45% OFF</span></p>",
+        "ggKSgXUlqLm_text": "<p>(1278 reviews)</p>",
+        "ggkbLc0x1Fi_label": "Pick It Now",
+        "ggkbLc0x1Fi_outOfStockLabel": "Out of stocks",
+        "ggkbLc0x1Fi_unavailableLabel": "Unavailable"
+      }
+    },
+    "gp_section_564704651824333835": {
+      "type": "gp-section-564704651824333835",
+      "settings": {
+        "section_preload": "false",
+        "checksum": "ddfbfd644f15da07d53efab9480065528634c9e659f402ab6481cc44843fd29c_1_1",
+        "ggmdu2aJRlj_text": "<p>TESTIMONIALS</p>",
+        "gghqGxEhy5I_text": "<p>Customer Stories</p>",
+        "ggypTSuUvsl_text": "<p>What an Amazingly Beautiful Diamond &amp; Awesome Customer Service!</p>",
+        "gghzonXSCJ6_text": "<p>Looked around to find the perfect diamond ring for my wife. EcomSolid has a wide selection and all are GIA graded diamonds. Gives me a peace of mind when I make my purchase with EcomSolid.</p>",
+        "ggUsQUH7cTr_text": "<p><strong>Angelina Jordan</strong></p>",
+        "ggkW1f1qzUq_text": "<p>Content Creator</p>",
+        "ggkvqNvXBV4_text": "<p>My wife was at a loss for words when I surprised her with this magnificent necklace.</p>",
+        "ggtchHRgPS5_text": "<p>The Diamond Pendant in 18k White Gold was a fantastic purchase that I made after careful consideration from friends and the website.</p>",
+        "ggU2-TB0zkr_text": "<p><strong>Tariq Jordan</strong></p>",
+        "ggTL6jPN03y_text": "<p>Manager</p>",
+        "ggMiUWMe35c_text": "<p>Beautiful And Dainty Diamond Earings</p>",
+        "ggoQhV28JLj_text": "<p>This was a perfect diamond earings for my wife. The size, style, the bling; everything about is perfect! This gift has brought us even closer. Thank you.</p>",
+        "ggBpZIbVhU6_text": "<p><strong>Christian Brian</strong></p>",
+        "gggN0_1I2qo_text": "<p>Graphic Designer</p>"
+      }
+    },
+    "gp_section_564704650079503371": {
+      "type": "gp-section-564704650079503371",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "d146e07267e4dff1022d9a71cd2ac8ba15e0eded74faf5a01ccd5649b95bfb9a_1_1",
+        "ggm4RmZVbpJ_text": "<p>Join Our Instagram <br>Community!</p>",
+        "gg5pidwVUNW_text": "<p>@ecomsolid.jewl</p>",
+        "gg-PcFdIIvB_text": "<p>Join Our Instagram Community!</p>",
+        "gg-HgiXpSZH_text": "<p>@ecomsolid.jewl</p>"
+      }
+    },
+    "gp_section_564704650079503155": {
+      "type": "gp-section-564704650079503155",
+      "settings": {
+        "section_preload": "false",
+        "checksum": "6159349ef9561c84e12dadc5ab5763170e8a02c5c9bb571e97f94f59c174851d_1_1",
+        "ggeXG4JEny__text": "<p>Newsletter</p>",
+        "ggxrWwmztSA_text": "<p>Great news! You can get 20% off your first order when you sign-up for our newsletter.</p>",
+        "ggixKiaO8X3_successMessage": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "ggixKiaO8X3_errorMessage": "Can’t send email. Please try again later.",
+        "ggem-SyAd4K_placeholder": "Enter Your Email Here",
+        "gg_Wz3A8HM3_text": "<p>Services</p>",
+        "gg1tLfuyaGl_text": "<p><a href=\"#\">Contact Us</a></p>",
+        "gg0CFEKcJJj_text": "<p><a href=\"#\">Delivery Information</a></p>",
+        "ggSrg6BzzpY_text": "<p><a href=\"#\">Return &amp; Exchange</a></p>",
+        "ggkDJSpaBnH_text": "<p>Contact Us</p>",
+        "ggmfBRtbMwh_text": "<p>2678 Simons Hollow Road, NYC, US</p>",
+        "ggACaQKj1_Z_text": "<p>999 - 9999 - 999</p>"
+      }
+    },
+    "gp_section_564704646120080146": {
+      "type": "gp-section-564704646120080146",
+      "settings": {
+        "section_preload": "off_lazy_script",
+        "checksum": "",
+        "ggRz3o7pbNS_text": "<p>Copyright © 2025 Hailemichael. All Rights Reserved.</p>"
       }
     }
   },
   "order": [
-    "image_banner",
-    "pagefly-home",
-    "benefits_section_mj74Xh"
+    "gp_section_564704643351839755",
+    "gp_section_564704650129834803",
+    "gp_section_564704646774391570",
+    "gp_section_564709056061637797",
+    "gp_section_564704651824333835",
+    "gp_section_564704650079503371",
+    "gp_section_564704650079503155",
+    "gp_section_564704646120080146"
   ]
 }

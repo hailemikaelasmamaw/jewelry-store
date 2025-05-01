@@ -570,7 +570,7 @@
                                 <ul class="list-unstyled" role="list">
                                   {%- for product in recommendations.products
                                     limit: block.settings.products_per_page
-                                    offset: forloop.index0 | times: block.settings.products_per_page
+                                    offset: continue
                                   -%}
                                     <li>
                                       {%- if block.settings.enable_quick_add -%}
@@ -717,11 +717,6 @@
         assign seo_media = product.featured_media
       endif
     -%}
-
-    <meta property="og:image" content="{{ seo_media | image_url: width: 1200 }}">
-    <meta property="og:image:secure_url" content="{{ seo_media | image_url: width: 1200 }}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="{{ 1200 | divided_by: seo_media.aspect_ratio | round }}">
 
     <script type="application/ld+json">
       {{ product | structured_data }}

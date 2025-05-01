@@ -18,7 +18,11 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
-            "link": ""
+            "text_alignment": "center",
+            "link": "",
+            "show_countdown": false,
+            "countdown_label": "Ends in:",
+            "countdown_date": ""
           }
         }
       },
@@ -26,10 +30,14 @@
         "announcement-bar-0"
       ],
       "settings": {
+        "gradient_start": "#4A90E2",
+        "gradient_end": "#50E3C2",
+        "text_color": "#FFFFFF",
+        "font_size": 14,
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "color_scheme": "scheme-3",
         "show_line_separator": true,
+        "enable_animation": true,
         "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false
@@ -38,7 +46,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "top-center",
+        "logo_position": "middle-center",
         "mobile_logo_position": "left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
@@ -50,8 +58,8 @@
         "enable_language_selector": true,
         "enable_customer_avatar": true,
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 8,
+        "padding_bottom": 0
       }
     }
   },
