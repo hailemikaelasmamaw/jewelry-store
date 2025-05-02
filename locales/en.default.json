@@ -115,7 +115,8 @@
   },
   "products": {
     "product": {
-      "title": "Product title",
+      "on_sale": "Sale",
+      "title": "Product title", 
       "quantity": {
         "label": "Quantity",
         "decrease": "Decrease quantity for {{ product }}",
